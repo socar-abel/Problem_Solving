@@ -108,8 +108,6 @@ array.sort()
 print(array)
 
 
-'''
-
 # 6-9 정렬 라이브러리에서 key를 활용한 소스코드 
 array = [('바나나',2),('사과',5),('당근',3)]
 
@@ -118,3 +116,85 @@ def setting(data):
 
 result = sorted(array,key=setting)
 print(result)
+
+
+# 2 위에서 아래로
+n = int(input())
+array=[]
+
+for _ in range(n):
+  array.append(int(input()))
+
+print("array :",array)
+
+array.sort()
+
+result = reversed(array)
+array.reverse()
+
+print("result :",array)
+print("result2 :",result) #이렇게 하면 안되고
+print("result2 :",list(result)) #이렇게 해야함
+
+
+# 3 성적이 낮은 순서로 학생 출력하기
+n = int(input())
+
+array = []
+
+for _ in range(n):
+  input_data = input().split()
+  array.append((input_data[0], int(input_data[1])))
+
+
+def setting(data):
+  return data[1]
+
+result = sorted(array, key = setting)
+
+print("result :",result)
+
+
+# 4 두 배열의 원소 교체
+# 나의 코드
+n, k = map(int, input().split())
+arrA = (list(map(int, input().split())))
+arrB = (list(map(int, input().split())))
+
+arrA.sort() 
+arrB.sort() 
+
+print('arrA :',arrA)
+print('arrB :',arrB)
+
+for i in range(k):
+  arrA[i], arrB[n-1-i] = arrB[n-1-i], arrA[i]
+
+print(arrA)
+
+sum=0
+for i in range(n):
+  sum+=arrA[i]
+
+print('sum :',sum)
+
+arrC = [i for i in range(1,10)]
+print('C :',arrC)
+
+
+# 책의 코드
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+a.sort()
+b.sort(reverse = True)
+
+for i in range(k):
+  if a[i]<b[i]:
+    a[i], b[i] = b[i], a[i]
+  else:
+    break
+print(sum(a))
+
+'''
