@@ -47,7 +47,6 @@ for i in range(3,n+1):
   d[i] = d[i-1] + d[i-2]
 print(d[n])
 
-'''
 
 # 2. 1로 만들기
 
@@ -64,3 +63,54 @@ for i in range(2,x+1):
     d[i] = min(d[i],d[i//5]+1)
 
 print(d[x])
+
+
+# 3. 개미 전사
+# 8-6 답안예시
+n = int(input())
+array = list(map(int,input().split()))
+
+d = [0]*100
+
+d[0] = array[0]
+d[1] = max(array[0],array[1])
+for i in range(2,n):
+  d[i] = max(d[i-1],d[i-2]+array[i])
+
+print(d[n-1])
+
+
+# 4 바닥 공사
+n = int(input())
+
+d = [0]*1001
+d[1]=1
+d[2]=3
+for i in range(3,n+1):
+  d[i]=(d[i-1]+d[i-2]*2)%796796
+
+print(d[n])
+
+
+'''
+
+# 5. 효율적인 화폐 구성
+# 8-8 답안 예시
+n, m = map(int, input().split())
+array = []
+for i in range(n):
+  array.append(int(input()))
+
+d = [10001] * (m+1)
+
+d[0]=0
+for i in range(n):
+  for j in range(array[i], m+1):
+    if d[j-array[i]] != 10001:
+      d[j] = min(d[j],d[j-array[i]]+1)
+
+if d[m]==10001:
+  print(-1)
+else:
+  print(d[m])
+
