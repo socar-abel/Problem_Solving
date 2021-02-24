@@ -221,4 +221,4 @@ def topology_sort():
   # 위상 정렬을 수행한 결과 출력    
   print("Result :",result) 
 
-topology_sort()
+topology_sort() 
