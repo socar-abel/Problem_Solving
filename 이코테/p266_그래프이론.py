@@ -178,8 +178,7 @@ for edge in edges:
 
 print("Minimum Cost of making Spanning Tree :",result)
 
-  
-'''
+
 # 10-6 위상 정렬 소스코드
 from collections import deque 
 # 노드의 개수와 간선의 개수를 입력받기 
@@ -221,4 +220,45 @@ def topology_sort():
   # 위상 정렬을 수행한 결과 출력    
   print("Result :",result) 
 
-topology_sort() 
+topology_sort()
+ 
+''' 
+
+# 2 팀 결성 
+# 10-7 답안 예시
+# 특정 원소가 속한 집합을 찾기
+def find_parent(parent, x):
+  # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출 
+  if parent[x]!=x:
+    parent[x]=find_parent(parent,parent[x])
+  return parent[x] 
+
+# 두 원소가 속한 집합을 찾기 
+def union_parent(parent,a,b):
+  a = find_parent(parent,a)
+  b = find_parent(parent,b)
+  if a<b:
+    parent[b]=a
+  else:
+    parent[a]=b 
+
+n, m = map(int, input().split()) 
+
+parent = [0]*(n+1) # 부모테이블 초기화 
+
+# 부모 테이블 상에서, 부모를 자기 자신으로 초기화 
+for i in range(0,n+1):
+  parent[i]=i
+
+# 각 연산을 하나씩 확인 
+for i in range(m):
+  oper, a, b = map(int, input().split())
+  # 합집합(union) 연산인 경우 
+  if oper==0:
+    union_parent(parent,a,b)
+  # 찾기(find) 연산인 경우 
+  elif oper==1:
+    if find_parent(parent,a) == find_parent(parent,b):
+      print('YES')
+    else:
+      print('NO')
