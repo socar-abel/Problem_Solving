@@ -221,8 +221,7 @@ def topology_sort():
   print("Result :",result) 
 
 topology_sort()
- 
-''' 
+
 
 # 2 팀 결성 
 # 10-7 답안 예시
@@ -262,3 +261,93 @@ for i in range(m):
       print('YES')
     else:
       print('NO')
+ 
+
+# 3 도시 분할 계획 
+# 10-8 답안 예시 
+# 특정 원소가 속한 집합을 찾기 
+def find_parent(parent,x):
+  if parent[x]!=x:
+    parent[x]=find_parent(parent,parent[x])
+  return parent[x]
+
+def union_parent(parent,a,b):
+  a = find_parent(parent,a)
+  b = find_parent(parent,b)
+  if a<b:
+    parent[b] = a
+  else :
+    parent[a] = b
+
+v,e = map(int ,input().split())
+parent = [0]*(v+1)
+
+edges=[]
+result=0
+
+for i in range(1,v+1):
+  parent[i]=i
+
+for _ in range(e):
+  a,b, cost = map(int, input().split())
+  edges.append((cost,a,b))
+
+edges.sort()  
+last = 0 
+
+for edge in edges:
+  cost, a, b = edge 
+  # 사이클이 발생하지 않는 경우에만 집합에 포함 
+  if find_parent(parent,a) != find_parent(parent,b):
+    union_parent(parent,a,b)
+    result+=cost    
+    last = cost
+
+print(result-last)
+ 
+'''
+
+# 4 커리큘럼 ( 제대로 이해 못했음. 다시 봐야 함. )
+# 10-9 답안예시 
+from collections import deque 
+import copy 
+
+# 노드의 개수 입력받기
+v = int(input())
+# 모든 노드에 대한 진입 차수는 0으로 초기화 
+indegree = [[0]*(v+1)]
+# 각 노드에 연결된 간선 정보를 담기 위한 연결 리스트 초기화 
+graph = [[]for i in range(v+1)]
+# 각 강의 시간을 0으로 초기화 
+time = [0]*(v+1) 
+
+# 방향 그래프의 모든 간선 정보를 입력받기 
+for i in range(1,v+1) :
+  data = list(map(int,input().split()))
+  time[i]=data[0] 
+  for x in data[1:-1]:  # 이해 안됨 ..;
+    indegree[i] += 1  
+    graph[x].append(i)
+
+# 위상 정렬 함수
+def topology_sort():
+  result = copy.deepcopy(time) #알고리즘 수행 결과를 담을 리스트 
+  q=deque()
+  
+  for i in range(1,v+1):
+    if indegree[i]==0:
+      q.append(i)
+  
+  while q: 
+    now = q.popleft() 
+    for i in graph[now]:
+      result[i] = max(result[i],result[now]+time[i])
+      indegree[i]=-1
+
+      if indegree[i]==0:
+        q.append(i)
+
+  for i in range(1,v+1):
+    print(result[i])
+
+topology_sort() 
