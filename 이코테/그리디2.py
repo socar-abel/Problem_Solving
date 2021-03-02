@@ -68,5 +68,93 @@ while True:
   m-=1 
 
 print(result) 
-'''
 
+
+# 3 숫자 카드 게임 
+n, m = map(int, input().split())
+graph = []
+
+for _ in range(n):
+  data = list(map(int,input().split()))
+  graph.append(data)
+
+mins = []
+
+for i in range(n):
+  now = min(graph[i]) 
+  mins.append(now)
+
+print('Result :',max(mins))
+
+
+# 3-3 min()  함수를 이용하는 답안 예시 
+n, m = map(int,input().split())
+
+result = 0
+
+for i in range(n):
+  data = list(map(int,input().split()))
+  min_value = min(data)
+  result = max(result,min_value)
+
+print(result)
+
+# 3-4 2중 반복문 구조를 이용하는 답안 예시. 별로인 것 같다.
+n,m = map(int,input().split())
+result = 0 
+for i in range(n):
+  data = list(map(int,input().split()))
+  min_value = 10001
+  for a in data:
+    min_value = min(min_value,a)
+  result = max(result,min_value)
+
+print(result) 
+
+# 4. 1이 될 때까지 
+n, k  = map(int,input().split())
+count = 0 
+
+while True:
+  if n % k == 0 :
+    n = n//k
+    count+=1 
+  else : 
+    n-=1
+    count+=1 
+  if n==1:
+    break  
+
+print(count)
+
+# 3-5 단순하게 푸는 답안 예시 
+n, k = map(int, input().split())
+result = 0 
+
+# n이 k 이상이라면 k로 계속 나누기 
+while n>=k:
+  while n%k != 0:
+    n-=1
+    result+=1
+  n//=k  
+  result +=1 
+while n<1:
+  n==1
+  result+=1
+print(result) 
+'''
+# 3-6 답안 예시 
+n, k = map(int, input().split())
+result = 0 
+
+while True:
+  target = (n//k)*k
+  result +=(n-target)
+  n=target 
+  if n<k:
+    break  
+
+  result+=1
+  n//=k  
+result+=(n-1)
+print(result)
