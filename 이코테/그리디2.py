@@ -145,7 +145,7 @@ print(result)
 '''
 # 3-6 답안 예시 
 n, k = map(int, input().split())
-result = 0 
+result = 0  
 
 while True:
   target = (n//k)*k
