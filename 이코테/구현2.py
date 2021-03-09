@@ -40,7 +40,7 @@ for command in commands:
     print()
 
 print('result:',location)
-'''
+
 # 4-1 책의 코드 
 n = int(input())
 x, y = 1, 1
@@ -61,3 +61,113 @@ for plan in plans:
   x, y = nx, ny
 
 print(x,y)
+
+# 예제 4-2 시각. 나의 코드와 책의 코드가 일치함 !
+n = int(input())
+
+count = 0
+
+for h in range(n+1):
+  for m in range(60):
+    for s in range(60):
+      hour = str(h)+str(m)+str(s)
+      if '3' in hour:
+        count+=1
+
+print('count :',count)
+
+# 2 왕실의 나이트 
+input = input() # input 보다는 input_data 라고 이름 붙이는 것이 더 좋다.
+case = 0 
+
+location = [ord(input[0])-ord("a")+1,int(input[1])]
+print(location)
+moves = [(-2,-1),(-1,-2),(1,-2),(2,-1),(2,1),(1,2),(-1,2),(-2,1)]
+
+for move in moves:
+  next = [location[0]+move[0], location[1]+move[1]]
+  if next[0] < 1 or next[1] < 1 or next[0] > 8 or next[1] >8:
+    continue
+  case+=1 
+
+print(case)
+
+
+# 3 게임 개발 (실패한 코드)
+n, m = map(int,input().split())
+x, y, d = map(int,input().split())
+
+graph = []
+
+for _ in range(n):
+  input_list = list(map(int,input().split()))
+  graph.append(input_list)
+
+directions = [(-1,0),(0,1),(1,0),(-1,0)] # 북 동 남 서 
+count = 0
+
+check=0
+while True:
+  
+  if check==4:
+    nx, ny = x-directions[d][0], y-directions[d][1]
+    check=0
+    if graph[nx][ny] == 1 :
+      break
+
+  d-=1
+  if d < -4:
+    d = -1
+
+  nx, ny = x+directions[d][0] , y+directions[d][1] 
+  
+  if graph[x][y] == 0 :
+    x, y = nx, ny  
+    graph[x][y]=2
+    count+=1 
+  else : 
+    check+=1
+
+
+
+print(count)
+'''
+
+# 3 게임 개발. 무한루프에 빠져버림
+n,m = map(int,input().split())
+x,y,d = map(int,input().split())
+graph = []
+
+for _ in range(n):
+  graph.append(list( map( int,input().split() ) ))
+
+direction = [(-1,0),(0,1),(1,0),(0,-1)] # 북 동 남 서 
+
+graph[x][y]==2 # 시작 노드 방문처리
+count = 1
+check = 0
+
+while True:
+  nx = x+direction[d][0]
+  ny = y+direction[d][1]
+
+  if graph[nx][ny] == 0:
+    graph[nx][ny] = 2 # 방문처리
+    x = nx
+    y = ny 
+    count += 1
+    print('count+=1')
+  else:
+    check += 1
+    print('check+=1')
+    d -= 1
+    if d==-5:
+      d=-1
+
+  if check == 4 :
+    x=x-direction[d][0]
+    y=y-direction[d][1]
+    if graph[x][y] == 1:
+      break
+
+print('result :',count)
