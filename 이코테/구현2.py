@@ -133,7 +133,7 @@ while True:
 print(count)
 '''
 
-# 3 게임 개발. 무한루프에 빠져버림
+# 3 게임 개발. 무한루프에 빠져버림. 결국 해결함,,
 n,m = map(int,input().split())
 x,y,d = map(int,input().split())
 graph = []
@@ -143,31 +143,44 @@ for _ in range(n):
 
 direction = [(-1,0),(0,1),(1,0),(0,-1)] # 북 동 남 서 
 
-graph[x][y]==2 # 시작 노드 방문처리
+graph[x][y]=2 # 시작 노드 방문처리
 count = 1
 check = 0
 
+
 while True:
+  print('- 현재위치 :',x,',',y)
+  d-=1
+  if d==-1:
+      d=3
   nx = x+direction[d][0]
   ny = y+direction[d][1]
+  print('d =',d)
+  print('nx, ny :',nx,ny)     
 
   if graph[nx][ny] == 0:
     graph[nx][ny] = 2 # 방문처리
     x = nx
     y = ny 
     count += 1
-    print('count+=1')
+    check = 0
+    print('방문, count+=1')
   else:
     check += 1
-    print('check+=1')
-    d -= 1
-    if d==-5:
-      d=-1
+    print('회전, check+=1')
+    print('check :',check)
+    
 
-  if check == 4 :
-    x=x-direction[d][0]
-    y=y-direction[d][1]
+  if check >= 4 :
+    print('현재 d :',d)
+    x = x-direction[d][0]
+    y = y-direction[d][1]
+    print('뒤로 후퇴') 
+    print('뒤로가면,',x,',',y)
+    
     if graph[x][y] == 1:
       break
+    else:
+      check=0
 
 print('result :',count)
