@@ -56,7 +56,7 @@ bfs(graph,1,visited)
 # 3 음료수 얼려먹기 (순수 내가 짠 코드. 그러나 1,2는 왜 탐색하지 못할까)
 # if와 elif의 관계로 짰기 때문이 아닐까? -> 완벽한 해결
 n,m = map(int,input().split())
-graph = []
+graph = [] 
 for _ in range(n):
   graph.append(list(map(int,input())))
 
