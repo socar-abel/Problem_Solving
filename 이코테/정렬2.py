@@ -9,4 +9,4 @@ for i in range(len(array)):
       
   array[min_index], array[i] = array[i], array[min_index]
 
-print(array)
+print(array) 
