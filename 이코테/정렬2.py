@@ -1,4 +1,4 @@
-
+'''
 # 6-1 선택 정렬 (selection sort)
 array = [7,5,9,0,8,3,1,6,2,4]
 
@@ -73,3 +73,27 @@ def quick_sort(array):
   return quick_sort(left_side) + [pivot] + quick_sort(right_side)
 
 print(quick_sort(array))
+
+# 선택 정렬 복습 (selection sort)
+array = [7,5,9,0,8,3,1,6,2,4]
+
+for i in range(len(array)):
+  min_index = i
+  for j in range(i+1,len(array)):
+    if array[min_index] > array[j]:
+      min_index=j
+  array[i], array[min_index] = array[min_index], array[i]
+
+print(array)
+'''
+# 삽입 정렬 복습 (insertion sort)
+array = [7,5,9,0,8,3,1,6,2,4]
+
+for i in range(1,len(array)):
+  for j in range(i,0,-1):
+    if array[j] < array[j-1] :
+      array[j], array[j-1] = array[j-1], array[j]
+    else :
+      break
+print(array)
+
