@@ -97,7 +97,6 @@ for i in range(1,len(array)):
       break
 print(array)
 
-'''
 
 # 계수 정렬 (count sort)
 # 모든 원소의 값이 0보다 크거나 같다고 가정
@@ -131,3 +130,45 @@ def setting(data):
   return data[1]
 result = sorted(array, key = setting)
 print(result)
+
+
+# 2. 위에서 아래로
+n = int(input())
+array = []
+for _ in range(n):
+  array.append(int(input()))
+
+array.sort(reverse = True)
+print(array)
+
+#3 성적이 높은 순서로 학생 출력하기
+n = int(input())
+list = []
+for _ in range(n):
+  input_data = input().split() 
+  list.append((input_data[0],int(input_data[1])))
+
+def keyFunc(data):
+  return data[1] 
+
+list.sort(key = keyFunc, reverse = True)
+
+print(list)
+  
+'''
+
+# 4 두 배열의 원소 교체
+n, k = map(int,input().split())
+
+arrayA=list(map(int,input().split()))
+arrayB=list(map(int,input().split()))
+
+for _ in range(k):
+  minA = min(arrayA)
+  minA_idx = arrayA.index(minA)
+  maxB = max(arrayB)
+  maxB_idx = arrayB.index(maxB)
+
+  arrayA[minA_idx], arrayB[maxB_idx] = arrayB[maxB_idx], arrayA[minA_idx]
+
+print(sum(arrayA))
