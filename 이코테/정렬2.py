@@ -85,7 +85,7 @@ for i in range(len(array)):
   array[i], array[min_index] = array[min_index], array[i]
 
 print(array)
-'''
+
 # 삽입 정렬 복습 (insertion sort)
 array = [7,5,9,0,8,3,1,6,2,4]
 
@@ -97,3 +97,37 @@ for i in range(1,len(array)):
       break
 print(array)
 
+'''
+
+# 계수 정렬 (count sort)
+# 모든 원소의 값이 0보다 크거나 같다고 가정
+array= [7,5,9,0,3,1,6,2,9,1,4,8,0,5,2]
+# 모든 범위를 포함하는 리스트 선언(모든 값은 0으로 초기화)
+count = [0]*(max(array)+1)
+
+for i in range(len(array)):
+  count[array[i]] += 1 # 각 데이터에 해당하는 인덱스의 값 증가
+
+for i in range(len(count)):
+  for j in range(count[i]):
+    print(i,end=' ')
+print()
+
+# using python sort library 1
+array = [7,5,9,0,3,1,6,2,4,8]
+
+result = sorted(array)
+print(result)
+
+# using python sort library 2
+array = [7,5,9,0,3,1,6,2,4,8]
+
+array.sort()  
+print(array)
+
+# using key
+array = [('바나나',2),('사과',5),('당근',3)]
+def setting(data):
+  return data[1]
+result = sorted(array, key = setting)
+print(result)
