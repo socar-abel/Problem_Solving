@@ -68,16 +68,15 @@ else :
 
 '''
 
-# 떡볶이 떡 만들기 (이거 도대체 왜 None이라고 나옴 ?)
+# 떡볶이 떡 만들기 (이거 진짜 도대체 왜 None이라고 나옴 ?)
+# 와 이해됨 반드시 return binary_search(..)로 호출해야 함
 n, m = map(int,input().split())
 array = list(map(int,input().split()))
 maxlen = max(array)
 
 def binary_search(array, target, start, end):
-  print()
-  print('start ,end ',start,end)
   if start > end:
-    return None
+    return 999
   total = 0
   mid = (start+end)//2 
   print('mid :',mid)
@@ -86,15 +85,13 @@ def binary_search(array, target, start, end):
       total += a-mid
     else :
       pass
-  print('target :',target)
-  print('total :',total)
   
   if target == total:
     return mid 
   elif target < total:
-    binary_search(array,target,mid+1,end)
+    return binary_search(array,target,mid+1,end)
   else :
-    binary_search(array,target,start,mid-1)
+    return binary_search(array,target,start,mid-1)
 
 result = binary_search(array, m ,0, maxlen)
 
