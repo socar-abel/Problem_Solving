@@ -33,7 +33,7 @@ def fibo_BottomUp(x):
   return d[x]
   
 print(fibo_BottomUp(99))
-'''
+
 
 # 1로 만들기 
 x = int(input())
@@ -75,3 +75,18 @@ for i in range(2,x+1):
   d[i] = min(candidate) + 1
 
 print(d[x])
+'''
+
+# 개미전사
+x = int(input())
+array = list(map(int,input().split()))
+d = [0]*101
+d[0]=array[0]
+d[1]=max(array[0],array[1])
+
+for i in range(2,x):
+  case1 = d[i-1]
+  case2 = d[i-2]+array[i]
+  d[i] = max(case1,case2)
+
+print(d[x-1])
