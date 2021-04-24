@@ -1,4 +1,8 @@
 '''
+DFS : 스택, 재귀 사용
+BFS : 큐 사용
+방문처리 잊지말기 !
+
 def dfs(graph,start,visited):
   visited[start] = True
   print(start,end=' ')
