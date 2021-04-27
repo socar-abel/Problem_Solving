@@ -1,4 +1,9 @@
 # 파싱을 하면 string형이 되므로 int(pq[i])를 해줬어야 했다.
+# 효율성 틀림..
+# 배운 스킬 1 : replace(" and "," ").split(" ")
+# 배운 스킬 2 : c = sorted(a, key=lambda x : x[0])
+# I = 50,000 
+# Q = 100,000
 def solution(info, query):
     answer = []
     
