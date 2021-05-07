@@ -7,6 +7,9 @@
 # 중복된 원소 처리에 있어서 set만을 고집 했던 것 같다.
 
 # 투 포인터 알고리즘 사용에는 문제가 없었다. O(N)이 소요되기 때문이다.
+
+# dictionary에서 get 함수 사용을 익히자.
+
 from collections import deque
 
 def solution(gems):
