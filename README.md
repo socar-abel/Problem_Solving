@@ -33,9 +33,11 @@ Python에서는 bisect를 지원한다.
 from bisect import bisect_left, bisect_right
 array = [10,10,10,20,30,30,40,40,40,40,40,60,70,80,80,90]
 
-cutLine = 95
+cutLine = 30
 index1 = bisect_left(array,cutLine)
 index2 = bisect_right(array,cutLine)
 print(index1,index2)
 </code>
 </pre>
+
+<code>4 6</code>
