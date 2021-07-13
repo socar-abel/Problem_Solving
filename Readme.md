@@ -9,16 +9,22 @@
 
 
 ## 1. List comprehension
-10 이하의 짝수를 담는 리스트 컴프리헨션   
+<pre>
 <code>
+10 이하의 짝수를 담는 리스트 컴프리헨션  
+
 list = [x for x in range(1,10+1) if x % 2 == 0]
 </code>
+</pre>
  
    
-0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
+<pre>
 <code>
+0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
+
 list = [x if x % 2 == 0 else 'odd' for x in range(5)]
-   </code>
+</code>
+</pre>
 
 
 
