@@ -40,4 +40,4 @@ print(index1,index2)
 </code>
 </pre>
 
-<code>4 6</code>
+-> 출력 : <code>4 6</code>
