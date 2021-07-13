@@ -26,7 +26,7 @@ listB[0] = 100
 <code>1,3,5</code>와 같이 2칸씩 띄고 싶다면   
 <code>listB = listB[::2]</code>와 같이 활용하면 된다.
 
-## 3. 이진탐색
+## 3. 간편한 이진탐색
 Python에서는 bisect를 지원한다.   
 <pre>
 <code>
