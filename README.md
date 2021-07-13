@@ -41,3 +41,9 @@ print(index1,index2)
 </pre>
 
 -> 출력 : <code>4 6</code>
+
+## 4. replace 함수를 활용한, 다조건 문자열 파싱
+카카오 - 순위 검색 문제   
+'and'도 파싱해야 하고, ' '도 파싱해야 하는 상황   
+<code>replace(' and ', ' ').split(' ')</code>   
+-> ' and '를 ' '로 대체시킨 후, ' '를 기준으로 쪼갠다.
