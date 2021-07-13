@@ -1,11 +1,11 @@
 # Python Tip
 
 1. List comprehension
-1. 리스트 복사   
-2. 슬라이싱 활용   
-3. 간편한 이진탐색   
-4. replace 함수를 활용한, 다조건 문자열 파싱   
-5. lambda + sorted   
+2. 리스트 복사   
+3. 슬라이싱 활용   
+4. 간편한 이진탐색   
+5. replace 함수를 활용한, 다조건 문자열 파싱   
+6. lambda + sorted   
 
 
 ## 1. List comprehension
@@ -30,7 +30,7 @@ list = [x if x % 2 == 0 else 'odd' for x in range(5)]
 
 
 
-## 1. 리스트 복사
+## 2. 리스트 복사
 
 파이썬 리스트에서는 deep copy와 shallow copy가 일어난다.
 <pre>
@@ -49,14 +49,14 @@ listB[0] = 100
    
     
    
-## 2. 슬라이싱 활용
+## 3. 슬라이싱 활용
 <code>listA = [1,2,3,4,5]</code>를 역순으로 사용하고 싶다면   
 <code>listB = listA[::-1]</code>와 같이 활용하면 된다.
    
 <code>1,3,5</code>와 같이 2칸씩 띄고 싶다면   
 <code>listB = listB[::2]</code>와 같이 활용하면 된다.
 
-## 3. 간편한 이진탐색
+## 4. 간편한 이진탐색
 Python에서는 bisect를 지원한다.   
 <pre>
 <code>
@@ -72,13 +72,13 @@ print(index1,index2)
 
 -> 출력 : <code>4 6</code>
 
-## 4. replace 함수를 활용한, 다조건 문자열 파싱
+## 5. replace 함수를 활용한, 다조건 문자열 파싱
 카카오 - 순위 검색 문제   
 'and'도 파싱해야 하고, ' '도 파싱해야 하는 상황   
 <code>replace(' and ', ' ').split(' ')</code>   
 -> ' and '를 ' '로 대체시킨 후, ' '를 기준으로 쪼갠다.
 
-## 5. lambda + sorted 
+## 6. lambda + sorted 
    
 <pre>
 <code>
