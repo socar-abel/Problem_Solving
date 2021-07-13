@@ -3,7 +3,7 @@
 1. List comprehension
 2. 리스트 복사   
 3. 슬라이싱 활용   
-4. 간편한 이진탐색   
+4. 간편한 이진탐색 bisect   
 5. replace 함수를 활용한, 다조건 문자열 파싱   
 6. lambda + sorted   
 
@@ -56,7 +56,7 @@ listB[0] = 100
 <code>1,3,5</code>와 같이 2칸씩 띄고 싶다면   
 <code>listB = listB[::2]</code>와 같이 활용하면 된다.
 
-## 4. 간편한 이진탐색
+## 4. 간편한 이진탐색 bisect
 Python에서는 bisect를 지원한다.   
 <pre>
 <code>
