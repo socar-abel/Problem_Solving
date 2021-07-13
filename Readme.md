@@ -14,6 +14,7 @@
 10 이하의 짝수를 담는 리스트 컴프리헨션  
 
 list = [x for x in range(1,10+1) if x % 2 == 0]
+--> list = [2,4,6,7,10]
 </code>
 </pre>
  
@@ -23,6 +24,7 @@ list = [x for x in range(1,10+1) if x % 2 == 0]
 0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
 
 list = [x if x % 2 == 0 else 'odd' for x in range(5)]
+--> list = [0,odd,2,odd,4]
 </code>
 </pre>
 
