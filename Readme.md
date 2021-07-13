@@ -47,3 +47,12 @@ print(index1,index2)
 'and'도 파싱해야 하고, ' '도 파싱해야 하는 상황   
 <code>replace(' and ', ' ').split(' ')</code>   
 -> ' and '를 ' '로 대체시킨 후, ' '를 기준으로 쪼갠다.
+
+## 5. lambda + sorted
+<pre>
+<code>
+c = sorted(a, key = lambda x : x[0])
+
+# 리스트 a에서 0번째 값을 key로 sorting한다.
+</code>
+</pre>
