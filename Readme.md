@@ -1,10 +1,25 @@
 # Python Tip
 
+1. List comprehension
 1. 리스트 복사   
 2. 슬라이싱 활용   
 3. 간편한 이진탐색   
 4. replace 함수를 활용한, 다조건 문자열 파싱   
 5. lambda + sorted   
+
+
+## 1. List comprehension
+10 이하의 짝수를 담는 리스트 컴프리헨션   
+<code>
+list = [x for x in range(1,10+1) if x % 2 == 0]
+</code>
+ 
+   
+0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
+<code>
+list = [x if x % 2 == 0 else 'odd' for x in range(5)]
+   </code>
+
 
 
 ## 1. 리스트 복사
