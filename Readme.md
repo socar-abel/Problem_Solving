@@ -55,7 +55,7 @@ print(index1,index2)
 <code>replace(' and ', ' ').split(' ')</code>   
 -> ' and '를 ' '로 대체시킨 후, ' '를 기준으로 쪼갠다.
 
-## 5. lambda + sorted
+## 5. lambda + sorted 
    
 <pre>
 <code>
