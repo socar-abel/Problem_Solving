@@ -7,7 +7,7 @@
 5. replace 함수를 활용한, 다조건 문자열 파싱   
 6. lambda + sorted   
 7. 리스트에서의 중복 제거
-8. 문자열과 
+8. 문자열과 리스트
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
