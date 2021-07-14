@@ -8,7 +8,7 @@
 6. lambda + sorted   
 7. 리스트에서의 중복 제거
 8. 문자열과 리스트
-9. isdigit(), isalpha()
+9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -123,7 +123,7 @@ x = 'n' + x[1:]
 </code>
 </pre>
 
-## 9. isdigit(), isalpha()
+## 9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
 <pre>
 <code>
 ex1 = '1'
