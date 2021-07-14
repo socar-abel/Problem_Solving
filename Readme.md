@@ -6,7 +6,7 @@
 4. 간편한 이진탐색 bisect   
 5. replace 함수를 활용한, 다조건 문자열 파싱   
 6. lambda + sorted   
-
+7. 리스트에서의 중복 제거
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -87,3 +87,14 @@ c = sorted(a, key = lambda x : x[0])
 </pre>
 
 리스트 a에서 0번째 값을 key로 sorting 하는 방법.
+
+## 7. 리스트에서의 중복제거
+<pre>
+<code>
+listA = [2,2,3,3,3,4,5,6,6,...]  # 정렬된 리스트
+listA = list(set(listA))
+listA.sort()
+</code>
+</pre>
+set을 이용해서 중복제거를 할 수 있지만, set을 사용하면 순서가 뒤섞이기 때문에 다시 sort()해줘야 한다.
+
