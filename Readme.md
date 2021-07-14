@@ -92,8 +92,8 @@ c = sorted(a, key = lambda x : x[0])
 <pre>
 <code>
 listA = [2,2,3,3,3,4,5,6,6,...]  # 정렬된 리스트
-listA = list(set(listA))
-listA.sort()
+listA = list(set(listA)) # 중복제거
+listA.sort()  # 재정렬
 </code>
 </pre>
 set을 이용해서 중복제거를 할 수 있지만, set을 사용하면 순서가 뒤섞이기 때문에 다시 sort()해줘야 한다.
