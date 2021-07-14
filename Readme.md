@@ -110,7 +110,7 @@ x = 'banana'
 </code>
 </pre>
 
-그렇다면 banana 라는 문자열을 nanana 라는 문자열로 변경할 수 있을까?
+그렇다면 'banana' 라는 문자열을 'nanana' 라는 문자열로 변경할 수 있을까?
 <pre>
 <code>
 x[0] = 'n' 
