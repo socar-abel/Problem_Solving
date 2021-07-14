@@ -1,6 +1,6 @@
 # Python Tip
 
-1. List comprehension
+1. 리스트 컴프리헨션
 2. 리스트 복사   
 3. 슬라이싱 활용   
 4. 간편한 이진탐색 bisect   
@@ -8,7 +8,7 @@
 6. lambda + sorted   
 
 
-## 1. List comprehension
+## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
 10 이하의 짝수를 담는 리스트 컴프리헨션  
