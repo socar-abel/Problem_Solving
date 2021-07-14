@@ -128,7 +128,7 @@ x = 'n' + x[1:]
 <code>
 ex1 = '1'
 ex2 = 'A'
-print(ex1.isdigit(),ex2.isalpha())
+print(ex1.isdigit(), ex2.isalpha())
 </code>
 </pre>
 
