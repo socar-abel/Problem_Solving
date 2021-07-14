@@ -8,6 +8,7 @@
 6. lambda + sorted   
 7. 리스트에서의 중복 제거
 8. 문자열과 리스트
+9. isdigit(), isalpha()
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -122,3 +123,13 @@ x = 'n' + x[1:]
 </code>
 </pre>
 
+## 9. isdigit(), isalpha()
+<pre>
+<code>
+ex1 = '1'
+ex2 = 'A'
+print(ex1.isdigit(),ex2.isalpha())
+</code>
+</pre>
+
+결과 : <code>True True</code>
