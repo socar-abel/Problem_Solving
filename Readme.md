@@ -151,7 +151,7 @@ for a in arr :
   if a == 3:
     a += 1
   print(a,end = ' ')
-print()  # --> 1 2 4 4 5
+print()  # 결과 --> 1 2 4 4 5
 
 # 해결법
 a = 0
@@ -160,6 +160,6 @@ while a < len(arr):
     a += 1
   print(arr[a],end = ' ')
   a += 1
-print()  # --> 1 2 4 5
+print()  # 결과 --> 1 2 4 5
 </code>
 </pre>
