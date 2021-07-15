@@ -9,6 +9,7 @@
 7. 리스트에서의 중복 제거
 8. 문자열과 리스트
 9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
+10. 파이썬 for문의 index
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -133,3 +134,29 @@ print(ex1.isdigit(), ex2.isalpha())
 </pre>
 
 결과 : <code>True True</code>
+
+## 10. 파이썬 for문의 index
+C++의 for문은   
+<code>for(int i=0; i<10; i++)</code>   
+처럼 쓰고 특정 조건일때 i의 값을 변경하면 조건문의 횟수를 조절할 수 있다.   
+   
+하지만 Python에서는 for문 안에서 i 값을 변경하면 그 반복문 내에서는 반영되지만, 다음 반복시에는 원래의 i값(다음값)으로 돌아간다.
+다음 예시는 1,2,3,4,5 를 가진 리스트에서, 3을 만날경우 건너뛰고 싶은 상황이다.   
+<code>
+<pre>
+arr = [1,2,3,4,5]
+
+for a in arr :
+  if a == 3:
+    a += 1
+  print(a,end = ' ')
+print()  # --> 1 2 4 4 5
+
+# 해결법
+a = 0
+while a < len(arr):
+  if arr[a] == 3:
+    a += 1
+  print(arr[a],end = ' ')
+  a += 1
+print()  # --> 1 2 4 5
