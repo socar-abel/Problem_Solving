@@ -160,3 +160,5 @@ while a < len(arr):
   print(arr[a],end = ' ')
   a += 1
 print()  # --> 1 2 4 5
+</code>
+</pre>
