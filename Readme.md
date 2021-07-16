@@ -176,8 +176,8 @@ answer = [...] 라는 리스트가 있을 때,
 <code>
 ...
 return answer or [-1]
-</pre>
 </code>
+</pre>
 다음과 같이 코드를 작성하면 answer가 비어있는 리스트일 경우 [-1]를 리턴한다.
    
 ## 13. upper와 lower
@@ -186,8 +186,10 @@ return answer or [-1]
 str = "Kim Sang Woo"
 print(str.upper())
 print(str.lower())
-</pre>
 </code>
-결과 : <code> KIM SANG WOO
+</pre>
+결과 : 
+<code> 
+KIM SANG WOO
 kim sang woo
 </code>
