@@ -12,7 +12,7 @@
 10. 파이썬 for문의 index
 11. pass와 continue의 차이 
 12. 빈 리스트일때의 return ... or 사용법  
-
+13. upper와 lower
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -165,7 +165,7 @@ while a < len(arr):
 print()  # 결과 --> 1 2 4 5
 </code>
 </pre>
-
+   
 ## 11. pass와 continue의 차이
 pass : 실행할 코드가 없는 것으로 다음 행동을 계속해서 진행한다.   
 continue : 바로 다음 순번의 loop를 수행한다.  
@@ -179,3 +179,15 @@ return answer or [-1]
 </pre>
 </code>
 다음과 같이 코드를 작성하면 answer가 비어있는 리스트일 경우 [-1]를 리턴한다.
+   
+## 13. upper와 lower
+<pre>
+<code>
+str = "Kim Sang Woo"
+print(str.upper())
+print(str.lower())
+</pre>
+</code>
+결과 : <code> KIM SANG WOO
+kim sang woo
+</code>
