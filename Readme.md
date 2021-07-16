@@ -10,7 +10,8 @@
 8. 문자열과 리스트
 9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
 10. 파이썬 for문의 index
-11. pass와 continue의 차이   
+11. pass와 continue의 차이 
+12. 빈 리스트일때의 return ... or 사용법  
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -167,4 +168,14 @@ print()  # 결과 --> 1 2 4 5
 
 ## 11. pass와 continue의 차이
 pass : 실행할 코드가 없는 것으로 다음 행동을 계속해서 진행한다.   
-continue : 바로 다음 순번의 loop를 수행한다.   
+continue : 바로 다음 순번의 loop를 수행한다.  
+
+## 12. 빈 리스트일때의 return ... or 사용법
+answer = [...] 라는 리스트가 있을 때,
+<pre>
+<code>
+...
+return answer or [-1]
+</pre>
+</code>
+다음과 같이 코드를 작성하면 answer가 비어있는 리스트일 경우 [-1]를 리턴한다.
