@@ -190,6 +190,6 @@ print(str.lower())
 </pre>
 결과 : 
 <code> 
-KIM SANG WOO
+KIM SANG WOO, 
 kim sang woo
 </code>
