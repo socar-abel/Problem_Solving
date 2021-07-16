@@ -10,6 +10,7 @@
 8. 문자열과 리스트
 9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
 10. 파이썬 for문의 index
+11. pass와 continue의 차이   
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -163,3 +164,5 @@ while a < len(arr):
 print()  # 결과 --> 1 2 4 5
 </code>
 </pre>
+
+## 11. pass와 continue의    
