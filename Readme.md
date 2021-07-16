@@ -193,3 +193,4 @@ print(str.lower())
 KIM SANG WOO, 
 kim sang woo
 </code>
+참고로 isupper와 islower도 존재하고, 정렬하였을 때 대문자가 소문자보다 앞에 위치한다.
