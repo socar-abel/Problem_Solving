@@ -12,7 +12,8 @@
 10. 파이썬 for문의 index
 11. pass와 continue의 차이 
 12. 빈 리스트일때의 return ... or 사용법  
-13. upper와 lower
+13. upper와 lower   
+14. in 활용법
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -194,3 +195,12 @@ KIM SANG WOO,
 kim sang woo
 </code>   
 참고로 isupper와 islower도 존재하고, 정렬하였을 때 대문자가 소문자보다 앞에 위치한다.
+
+## 14. in 활용법
+x 가 3,4,6,7 인 경우를 체크하고 싶을때,
+<pre>
+<code>
+if x in [3,4,6,7]:
+</code>
+</pre>
+와 같이 코드를 작성하면 깔끔하다.
