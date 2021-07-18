@@ -15,6 +15,7 @@
 13. upper와 lower   
 14. in 활용법
 15. return True or False 간략화
+16. 문자열 곱셈 활용
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -227,3 +228,22 @@ def func2(x):
 </code>
 </pre>   
 if문을 사용하지 않아도 True와 False를 판단하여 리턴한다.
+
+## 16. 문자열 곱셈 활용
+숫자가 나열된 문자열에서 마지막 4자리를 제외한 모든 숫자를 *로 변경하고 싶을 경우.
+<pre>
+<code>
+# 내가 전에 짰던 코드
+def solution(phone_number):
+    plist = list(phone_number)
+    for i in range(len(plist)-4):
+        plist[i] = "*"
+    
+    return "".join(plist)
+
+# 문자열 곱셈을 이용하면 for문을 사용할 필요가 없어진다.
+def solution(phone_number):
+    
+    return "*" * ( len(phone_number)-4 ) + phone_number[-4:]
+</code>
+</pre>
