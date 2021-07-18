@@ -234,6 +234,7 @@ if문을 사용하지 않아도 True와 False를 판단하여 리턴한다.
 <pre>
 <code>
 # 내가 전에 짰던 코드
+
 def solution(phone_number):
     plist = list(phone_number)
     for i in range(len(plist)-4):
@@ -242,6 +243,7 @@ def solution(phone_number):
     return "".join(plist)
 
 # 문자열 곱셈을 이용하면 for문을 사용할 필요가 없어진다.
+
 def solution(phone_number):
     
     return "*" * ( len(phone_number)-4 ) + phone_number[-4:]
