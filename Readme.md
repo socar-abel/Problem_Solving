@@ -1,4 +1,4 @@
-# Python Tip by KSW
+# Python Tip - by KSW
 
 1. 리스트 컴프리헨션
 2. 리스트 복사   
