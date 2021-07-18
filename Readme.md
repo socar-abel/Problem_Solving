@@ -14,6 +14,7 @@
 12. 빈 리스트일때의 return ... or 사용법  
 13. upper와 lower   
 14. in 활용법
+15. return True or False 간략화
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -204,3 +205,18 @@ if x in [3,4,6,7]:
 </code>
 </pre>
 와 같이 코드를 작성하면 깔끔하다.
+
+## 15. return True or False 간략화
+예를들어, x가 짝수면 True, 홀수면 False를 리턴하는 함수를 생각해보자.
+<pre>
+<code>
+# 내가 짜던 코드
+def func(x):
+ return True if x % 2 == 0 else False
+
+# 간략화
+def func2(x):
+ return x % 2 == 0
+</code>
+</pre>   
+if문을 사용하지 않아도 True와 False를 판단하여 리턴한다.
