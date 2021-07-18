@@ -1,5 +1,4 @@
-# Python Tip
-## Kim Sang Woo
+# Python Tip ## Kim Sang Woo
 
 1. 리스트 컴프리헨션
 2. 리스트 복사   
