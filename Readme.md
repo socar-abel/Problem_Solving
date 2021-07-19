@@ -16,7 +16,7 @@
 14. in 활용법
 15. return True or False 간략화
 16. 문자열 곱셈 활용
-17. heapq.heapify(list)
+17. heapq.heapify(myList)
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
