@@ -289,7 +289,7 @@ sumList = [x+y for x, y in zip(listA, listB)]
 </pre>
 
 ## 19. enumerate
-19번과 20번 Tip은 프로그래머스 Level2. 프린터 문제에서 공부한 내용이다.   
+19번과 20번 팁은 프로그래머스 Level2. 프린터 문제에서 공부한 내용이다.   
 enumerate는 “열거하다”라는 뜻이고, 리스트가 있는 경우 순서와 리스트의 값을 전달하는 기능을 가진다.
 <pre>
 <code>
