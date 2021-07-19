@@ -309,7 +309,7 @@ max 바깥에 [1]이 또 붙음으로써, max에서 tuple의 1번째 index를 �
 이럴 땐 'any' 라는 키워드를 활용할 수 있다.
 <pre>
 <code>
-if any(2 < q[1] for q in queue) : return False
+if any(2 < q[1] for q in queue) : return True
 </code>
 </pre>
 파이썬은 너무 아름답다,,
