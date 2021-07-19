@@ -16,6 +16,8 @@
 14. in 활용법
 15. return True or False 간략화
 16. 문자열 곱셈 활용
+---
+17. heapq.heapify(list)
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -247,5 +249,17 @@ def solution(phone_number):
 def solution(phone_number):
     
     return "*" * ( len(phone_number)-4 ) + phone_number[-4:]
+</code>
+</pre>
+
+## 17. heapq.heapify(list)
+정렬된 자료구조에서 min 값을 반복적으로 찾아야 하는 문제가 있다.   
+이러한 경우에는 heap 자료구조를 사용하는 것이 효율적이다.
+<pre>
+<code>
+'''python
+myList = [....]
+heapq.heapify(myList) # O(n)에 힙을 생성
+'''
 </code>
 </pre>
