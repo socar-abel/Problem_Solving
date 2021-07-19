@@ -259,6 +259,9 @@ def solution(phone_number):
 <code>
 myList = [....]
 heapq.heapify(myList) # O(n)에 힙을 생성
+
+# heapq.heappop() 을 하지않고 min 값만 구하는 방법
+minValue = myList[0]
 </code>
 </pre>
 
