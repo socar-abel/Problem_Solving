@@ -300,7 +300,7 @@ queue = [(i,p) for i, p in enumerate(priorities)]
 queue = <code> [(0,2), (1,1), (2,3), (3,2)] </code>
 
 ## 20. max + lambda 와 any 
-max에서도 lambda 함수가 사용가능하다.   
+max에서도 lambda 함수를 사용할수있다.   
 19번 팁에서 구한 queue에서, index 1을 기준으로 max값을 찾고싶다면,
 <code> max(queue, key = lambda x : x[1])[1] </code>와 같이 코드를 작성하면된다.   
 max 바깥에 [1]이 또 붙음으로써, max에서 tuple의 1번째 index를 반환할 수 있다는 것이 핵심이다.   
