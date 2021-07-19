@@ -256,8 +256,10 @@ def solution(phone_number):
 정렬된 자료구조에서 min 값을 반복적으로 찾아야 하는 문제가 있다.   
 이러한 경우에는 heap 자료구조를 사용하는 것이 효율적이다.
 
-'''python
+<pre>
+<code>
 myList = [....]
 heapq.heapify(myList) # O(n)에 힙을 생성
-'''
+</code>
+</pre>
 
