@@ -312,4 +312,4 @@ max 바깥에 [1]이 또 붙음으로써, max에서 tuple의 1번째 index를 �
 if any(2 < q[1] for q in queue) : return True
 </code>
 </pre>
-파이썬은 너무 아름답다,,
+파이썬은 너무 아름답다..
