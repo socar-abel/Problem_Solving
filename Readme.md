@@ -17,6 +17,7 @@
 15. return True or False 간략화
 16. 문자열 곱셈 활용
 17. heapq.heapify(myList)
+18. zip 활용법
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -265,3 +266,15 @@ minValue = myList[0]
 </code>
 </pre>
 
+## 18. zip 활용
+sumList에 listA와 listB의 값들의 합을 pythonic 하게 담아보자.
+<pre>
+<code>
+# 전에 짜던 코드 방식
+for i in range(len(listA)):
+  sumList.append(listA[i]+listB[i])
+
+# Pythonic
+sumList = [x+y for x, y in zip(listA, listB)]
+</code>
+</pre>
