@@ -1,5 +1,6 @@
 # Python Tip - by KSW
 
+-- Level 1
 1. 리스트 컴프리헨션
 2. 리스트 복사   
 3. 슬라이싱 활용   
@@ -16,7 +17,7 @@
 14. in 활용법
 15. return True or False 간략화
 16. 문자열 곱셈 활용   
-   
+-- Level 2
 17. heapq.heapify(list)
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
