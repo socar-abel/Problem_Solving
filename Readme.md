@@ -266,7 +266,7 @@ minValue = myList[0]
 </code>
 </pre>
 
-## 18. zip 활용
+## 18. zip 활용법
 sumList에 listA와 listB의 값들의 합을 pythonic 하게 담아보자.
 <pre>
 <code>
