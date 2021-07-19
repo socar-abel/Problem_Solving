@@ -18,6 +18,9 @@
 16. 문자열 곱셈 활용
 17. heapq.heapify(myList)
 18. zip 활용법
+19. enumerate
+20. max + lambda / any 
+
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -284,3 +287,14 @@ for i in range(len(listA)):
 sumList = [x+y for x, y in zip(listA, listB)]
 </code>
 </pre>
+
+## 19. enumerate
+19번과 20번 Tip은 프로그래머스 Level2. 프린터 문제에서 공부한 내용이다.   
+enumerate는 “열거하다”라는 뜻이고, 리스트가 있는 경우 순서와 리스트의 값을 전달하는 기능을 가진다.
+<pre>
+<code>
+priorities = [2,1,3,2]
+queue = [(i,p) for i, p in enumerate(priorities)]
+</code>
+</pre>
+queue = <code> [(0,2), (1,1), (2,3), (3,2)] 
