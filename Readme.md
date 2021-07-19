@@ -19,7 +19,7 @@
 17. heapq.heapify(myList)
 18. zip 활용법
 19. enumerate
-20. max + lambda / any 
+20. max + lambda 와 any 
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -297,4 +297,19 @@ priorities = [2,1,3,2]
 queue = [(i,p) for i, p in enumerate(priorities)]
 </code>
 </pre>
-queue = <code> [(0,2), (1,1), (2,3), (3,2)] 
+queue = <code> [(0,2), (1,1), (2,3), (3,2)] </code>
+
+## 20. max + lambda 와 any 
+max에서도 lambda 함수가 사용가능하다.   
+19번 팁에서 구한 queue에서, index 1을 기준으로 max값을 찾고싶다면,
+<code> max(queue, key = lambda x : x[1])[1] </code>와 같이 코드를 작성하면된다.   
+max 바깥에 [1]이 또 붙음으로써, max에서 tuple의 1번째 index를 반환할 수 있다는 것이 핵심이다.   
+   
+한편, queue에서 index 1기준으로 2보다 큰 tuple이 하나라도 존재하는지 판별하고 싶다.   
+이럴 땐 'any' 라는 키워드를 활용할 수 있다.
+<pre>
+<code>
+if any(2 < q[1] for q in queue) : return False
+</code>
+</pre>
+파이썬은 너무 아름답다,,
