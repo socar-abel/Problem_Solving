@@ -20,6 +20,7 @@
 18. zip 활용법
 19. enumerate
 20. max + lambda 와 any 
+21. product
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -313,3 +314,15 @@ if any(2 < q[1] for q in queue) : return True
 </code>
 </pre>
 파이썬은 너무 아름답다..
+
+## 21. product 
+데카르트 곱 이라고도 하는 cartesian product(곱집합)를 표현할 수 있다.   
+<pre>
+<code>
+from itertools import product
+myList = ["012","abc","!@#"]
+print(list(product(*myList)))
+
+--> [('0', 'a', '!'), ('0', 'a', '@'), ('0', 'b', '!'), ('0', 'b', '@'), ('1', 'a', '!'), ('1', 'a', '@'), ('1', 'b', '!'), ('1', 'b', '@')]
+</code>
+</pre>
