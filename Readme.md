@@ -340,4 +340,4 @@ table = [[0] * h for _ in range(w)]
 # h와 w의 순서를 잘 생각해볼 것
 </code>
 </pre>
-와 같이 선언해야, <code> value = table[6][8] </code>와 같이 (6,8)에 접근할 수 있게된다.
+와 같이 선언해야, <code> value = table[6][9] </code>와 같이 (6,9)에 접근할 수 있게된다.
