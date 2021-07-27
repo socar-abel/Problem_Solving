@@ -78,7 +78,8 @@ listB[0] = 100
 <code>listB = listB[::2]</code>와 같이 활용하면 된다.
 
 ## 4. 간편한 이진탐색 bisect
-Python에서는 bisect를 지원한다.   
+Python에서는 bisect를 지원한다.  
+이진탐색의 시간복잡도는 O(log n) time이므로 코딩테스트에서 활용하기 좋다.
 <pre>
 <code>
 from bisect import bisect_left, bisect_right
