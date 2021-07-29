@@ -39,3 +39,8 @@
 #### 6. 짝지어 제거하기
    
 자료구조에 대한 이해
+   
+#### 7. 큰 수 만들기
+   
+자료구조 - Stack / Queue / Heap   
+파이썬 데이터 타입 - List / Tuple / Dictionary / Set
