@@ -7,7 +7,7 @@
 <pre>
 자료구조 - Stack / Queue / Heap   
 파이썬 데이터 타입 - List / Tuple / Dictionary / Set   
-탐색 - 순차탐색 / 이진탐색 / 해쉬 탐색 (딕셔너리 탐색)
+탐색 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)
 </pre>
 ## 복습할 것
 ### Level 1
