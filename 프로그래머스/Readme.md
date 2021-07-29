@@ -5,9 +5,10 @@
 7/14 : 랭킹 31587위   
 ## 알고리즘 문제 풀 때 고려할 것   
 <pre>
-자료구조 - Stack / Queue / Heap   
-파이썬 데이터 타입 - List / Tuple / Dictionary / Set   
-탐색 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)
+자료구조 3가지 - Stack / Queue / Heap   
+파이썬 데이터 타입 4가지- List / Tuple / Dictionary / Set   
+   
+3가지 탐색법 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)
 </pre>
 ## 복습할 것
 ### Level 1
