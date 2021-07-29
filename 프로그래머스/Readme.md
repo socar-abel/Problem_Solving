@@ -3,6 +3,11 @@
 2021 여름방학 - 프로그래머스   
 7/12 : 랭킹 59820위   
 7/14 : 랭킹 31587위   
+## 알고리즘 문제 풀 때 고려할 것   
+<pre>
+자료구조 - Stack / Queue / Heap   
+파이썬 데이터 타입 - List / Tuple / Dictionary / Set
+</pre>
 ## 복습할 것
 ### Level 1
 #### 1. [1차]다트게임   
@@ -42,5 +47,4 @@
    
 #### 7. 큰 수 만들기
    
-자료구조 - Stack / Queue / Heap   
-파이썬 데이터 타입 - List / Tuple / Dictionary / Set
+자료구조에 대한 이해
