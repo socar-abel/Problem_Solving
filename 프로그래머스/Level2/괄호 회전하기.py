@@ -9,16 +9,12 @@ def isCorrect(string):
     for s in string[1:]:
         if stack and match(stack[-1],s) : stack.pop()
         else : stack.append(s)
-    
     return True if not stack else False
 
 def solution(string):
     answer = 0
-    
     l = len(string)
     string *= 2
-    
     for i in range(l):
         if isCorrect(string[i:l+i]) : answer += 1
-    
     return answer
