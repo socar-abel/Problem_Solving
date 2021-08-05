@@ -22,6 +22,7 @@
 20. max + lambda 와 any 
 21. product
 22. 2차원 배열로 좌표평면 나타낼 때 주의점
+23. deque의 잡기술
 
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
@@ -342,3 +343,40 @@ table = [[0] * h for _ in range(w)]
 </code>
 </pre>
 와 같이 선언해야, <code> value = table[6][9] </code>와 같이 (6,9)에 접근할 수 있게된다.
+   
+## 23. deque의 잡기술
+deque에는 maxlen, extend, extendleft, reverse, rotate 5가지의 유용한 잡기술이 존재한다.
+<pre>
+<code>
+from collections import deque
+
+q = deque([1,2,3],maxlen = 4)
+
+print(q)
+q.extend([4,5,6]) # 오른쪽에 이어붙인다.
+print('extend -',q)
+
+q.extendleft([1,2,3]) # 1,2,3 을 순서대로 왼쪽에 이어붙인다.
+print('extendleft -',q)
+
+q.reverse() # 모든 원소 순서를 뒤집는다.
+print('reverse -',q)
+
+q.rotate(2) # 모든 원소를 2칸 오른쪽으로 회전한다.
+print('rotate 2 -',q)
+
+q.rotate(-1) # 모든 원소를 1칸 왼쪽으로 회전시킨다.
+print('rotate -1 -',q)
+</code>
+</pre>
+출력 결과   
+<pre>
+<code>
+deque([1, 2, 3], maxlen=4)
+extend - deque([3, 4, 5, 6], maxlen=4)
+extendleft - deque([3, 2, 1, 3], maxlen=4)
+reverse - deque([3, 1, 2, 3], maxlen=4)
+rotate 2 - deque([2, 3, 3, 1], maxlen=4)
+rotate -1 - deque([3, 3, 1, 2], maxlen=4)
+</code>
+</pre>
