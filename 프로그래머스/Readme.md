@@ -20,7 +20,7 @@
    
 ✔️ 탐색법 3가지 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)   
    
-✔️ 문제가 풀리지 않을 때 고려해볼 알고리즘들 - DFS / BFS / Dijkstra / Floyd Warshall / Dynamic Programming / Prefix Sum / Two Pointer
+✔️ 문제가 풀리지 않을 때 고려해볼 알고리즘들 - Dynamic Programming / Prefix Sum / Two Pointer
    
 </pre>
 ## 복습할 것
