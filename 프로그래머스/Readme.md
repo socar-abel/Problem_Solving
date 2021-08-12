@@ -14,10 +14,14 @@
 
 ## 알고리즘 문제 풀 때 고려할 것
 <pre>
-* 자료구조 3가지 - Stack / Queue / Heap   
-* 파이썬 데이터 타입 4가지- List / Tuple / Dictionary / Set   
+✔️ 자료구조 3가지 - Stack / Queue / Heap  
    
-탐색법 3가지 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)
+✔️ 파이썬 데이터 타입 4가지- List / Tuple / Dictionary / Set   
+   
+✔️ 탐색법 3가지 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)   
+   
+✔️ 문제가 풀리지 않을 때 고려해볼 알고리즘들 - DFS / BFS / Dijkstra / Floyd Warshall / Dynamic Programming / Prefix Sum / Two Pointer
+   
 </pre>
 ## 복습할 것
 ### Level 1
