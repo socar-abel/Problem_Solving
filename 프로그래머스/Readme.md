@@ -12,17 +12,6 @@
 8/3 : 랭킹 3324위  
 8/11 : 랭킹 2687위   
 
-## 알고리즘 문제 풀 때 고려할 것
-<pre>
-✔️ 자료구조 3가지 - Stack / Queue / Heap  
-   
-✔️ 파이썬 데이터 타입 4가지- List / Tuple / Dictionary / Set   
-   
-✔️ 탐색법 3가지 - 순차탐색 / 이진탐색 / 해시 탐색 (딕셔너리 탐색)   
-   
-✔️ 문제가 풀리지 않을 때 고려해볼 알고리즘들 - Dynamic Programming / Prefix Sum / Two Pointer
-   
-</pre>
 ## 복습할 것
 ## Level 1
 #### 1. [1차]다트게임   
