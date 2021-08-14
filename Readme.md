@@ -22,8 +22,8 @@
 20. max + lambda 와 any 
 21. product
 22. 2차원 배열로 좌표평면 나타낼 때 주의점
-23. deque의 잡기술
-
+23. deque의 잡기술   
+24. 16진법 이상의 n진수 변환   
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -378,5 +378,20 @@ extendleft - deque([3, 2, 1, 3], maxlen=4)
 reverse - deque([3, 1, 2, 3], maxlen=4)
 rotate 2 - deque([2, 3, 3, 1], maxlen=4)
 rotate -1 - deque([3, 3, 1, 2], maxlen=4)
+</code>
+</pre>
+## 24. 16진법 이상의 n진수 변환 
+10 부터 'A'로 표기했을 때 n진수 변환 코드이다.   
+<pre>
+<code>
+import string
+
+tmp = string.digits+string.ascii_uppercase
+def convert(num, base) :
+    q, r = divmod(num, base)
+    if q == 0 :
+        return tmp[r] 
+    else :
+        return convert(q, base) + tmp[r]
 </code>
 </pre>
