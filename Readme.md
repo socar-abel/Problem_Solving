@@ -12,7 +12,7 @@
 10. 파이썬 for문의 index
 11. pass와 continue의 차이 
 12. 빈 리스트일때의 return ... or 사용법  
-13. upper와 lower   
+[13. upper와 lower](#13.-upper와-lower)
 14. in 활용법
 15. return True or False 간략화
 16. 문자열 곱셈 활용
