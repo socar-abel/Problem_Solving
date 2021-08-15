@@ -1,7 +1,7 @@
 # Python Tip - by KSW   
 ## Contents   
 [1. 리스트 컴프리헨션](#리스트-컴프리헨션)   
-[2. 리스트 복사](#2.-리스트-복사)
+[2. 리스트 복사](#2.-리스트-복사)   
 3. 슬라이싱 활용   
 4. 간편한 이진탐색 bisect   
 5. replace 함수를 활용한, 다조건 문자열 파싱   
@@ -53,7 +53,7 @@ list = [x if x % 2 == 0 else 'odd' for x in range(5)]
 
 
 
-## 2. 리스트 복사
+## 리스트 복사
 
 파이썬 리스트에서는 deep copy와 shallow copy가 일어난다.
 <pre>
