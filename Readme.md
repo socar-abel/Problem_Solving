@@ -1,6 +1,6 @@
 # Python Tip - by KSW   
 ## Contents   
-[1. 리스트 컴프리헨션](#1-list-comprehension)
+[1. 리스트 컴프리헨션](#list-comprehension)
 2. 리스트 복사   
 3. 슬라이싱 활용   
 4. 간편한 이진탐색 bisect   
@@ -25,7 +25,7 @@
 23. deque의 잡기술   
 24. 16진법 이상의 n진수 변환 
 25. title(), capitalize() 를 활용한 문자열 다루기
-## 1️. List Comprehension
+## List Comprehension
 <pre>
 <code>
 10 이하의 짝수를 담는 리스트 컴프리헨션  
