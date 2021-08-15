@@ -23,7 +23,8 @@
 21. product
 22. 2차원 배열로 좌표평면 나타낼 때 주의점
 23. deque의 잡기술   
-24. 16진법 이상의 n진수 변환   
+24. 16진법 이상의 n진수 변환 
+25. title(), capitalize() 를 활용한 문자열 다루기
 ## 1. 리스트 컴프리헨션 (List comprehension)
 <pre>
 <code>
@@ -394,4 +395,18 @@ def convert(num, base) :
     else :
         return convert(q, base) + tmp[r]
 </code>
+</pre>
+
+## 25. title(), capitalize() 를 활용한 문자열 다루기
+<pre>
+<code>
+string = "HI my NAME is ksw"
+print(string.title())
+print(string.capitalize())
+</code>
+</pre>
+결과
+<pre>
+Hi My Name Is Ksw
+Hi my name is ksw
 </pre>
