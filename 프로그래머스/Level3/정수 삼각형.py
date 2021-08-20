@@ -1,3 +1,5 @@
+# 다이나믹 프로그래밍에 성장했음을 느낀 문제..
+
 def solution(triangle):
     answer = 0
     maximum = [[0 for _ in range(x+1)] for x in range(len(triangle))]
