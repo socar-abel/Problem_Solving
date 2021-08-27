@@ -3,7 +3,7 @@ import heapq
 def solution(jobs):
     total = 0
     time = 0; i = 0; start = -1; waiting = []
-    jobs.sort(key = lambda x : x[0])
+    jobs.sort(key = lambda x : x[0])    # sort를 해준 뒤에
     while i < len(jobs):
         for job in jobs[i:]:  # 이 부분이 다름
             if start < job[0] <= time:
