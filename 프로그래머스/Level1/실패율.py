@@ -20,8 +20,7 @@ def solution(N, stages):
         enums.append(enum)
     
     enums.sort(key = lambda x : x[1], reverse = True)
+    answer = list(map(lambda x : x[0], enums[:-1]))
     
-    for enum in enums[:-1]:
-        answer.append(enum[0])
     
     return answer
