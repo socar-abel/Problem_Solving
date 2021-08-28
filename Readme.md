@@ -93,6 +93,25 @@ index2 = bisect_right(array,cutLine)
 print(index1,index2)
 </code>
 </pre>
+   
+추가) 리스트에 없는 원소를 bisect 탐색한다면 ?
+<pre>
+<code>
+import bisect 
+list = [10,20,30,40,50]
+print(bisect.bisect_left(30))
+print(bisect.bisect_right(30))
+
+print(bisect.bisect_left(35))
+print(bisect.bisect_right(35))
+</code>
+</pre>
+결과 :
+2   
+3   
+3   
+3   
+따라서 bisect_left와 bisect_right의 값이 같은 경우, 리스트에 없는 원소라고 판단 할 수 있게 된다.
 
 -> 출력 : <code>4 6</code>
 
