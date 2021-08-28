@@ -99,11 +99,11 @@ print(index1,index2)
 <code>
 import bisect 
 list = [10,20,30,40,50]
-print(bisect.bisect_left(30))
-print(bisect.bisect_right(30))
+print(bisect.bisect_left(list,30))
+print(bisect.bisect_right(list,30))
 
-print(bisect.bisect_left(35))
-print(bisect.bisect_right(35))
+print(bisect.bisect_left(list,35))
+print(bisect.bisect_right(list,35))
 </code>
 </pre>
 결과 :   
