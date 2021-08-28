@@ -2,7 +2,6 @@
 # Level1은 아니고 Level2 정도? 되는 듯
 import bisect
 def solution(N, stages):
-    answer = []
     stages.sort()
     failure = [-1] * (N+1)
     
@@ -20,7 +19,4 @@ def solution(N, stages):
         enums.append(enum)
     
     enums.sort(key = lambda x : x[1], reverse = True)
-    answer = list(map(lambda x : x[0], enums[:-1]))
-    
-    
-    return answer
+    return list(map(lambda x : x[0], enums[:-1]))
