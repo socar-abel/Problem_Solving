@@ -93,7 +93,7 @@ index2 = bisect_right(array,cutLine)
 print(index1,index2)
 </code>
 </pre>
-   
+-> 출력 : <code>4 6</code>   
 추가) 리스트에 없는 원소를 bisect 탐색한다면 ?
 <pre>
 <code>
@@ -113,7 +113,6 @@ print(bisect.bisect_right(35))
 3   
 따라서 bisect_left와 bisect_right의 값이 같은 경우, 리스트에 없는 원소라고 판단 할 수 있게 된다.
 
--> 출력 : <code>4 6</code>
 
 ## 5. replace 함수를 활용한, 다조건 문자열 파싱
 카카오 - 순위 검색 문제   
