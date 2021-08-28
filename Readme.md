@@ -106,7 +106,7 @@ print(bisect.bisect_left(35))
 print(bisect.bisect_right(35))
 </code>
 </pre>
-결과 :
+결과 :   
 2   
 3   
 3   
