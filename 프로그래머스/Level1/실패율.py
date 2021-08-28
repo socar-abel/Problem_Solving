@@ -1,5 +1,5 @@
 # 이진탐색으로 구현 안해도 효율성 테스트 통과는 하는 듯 하다.
-# Level1은 아니고 Level2 정도? 되는 듯
+# Level 1은 아니고 Level 2 정도? 되는 듯
 import bisect
 def solution(N, stages):
     stages.sort()
