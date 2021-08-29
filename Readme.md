@@ -25,7 +25,7 @@
 23. deque의 잡기술   
 24. 16진법 이상의 n진수 변환 
 25. title(), capitalize() 를 활용한 문자열 다루기 
-26. 
+26. 파이썬은 객체지향 언어이다.
 ## 1. 리스트 컴프리헨션
 <pre>
 <code>
@@ -429,3 +429,7 @@ print(string.capitalize())
 Hi My Name Is Ksw
 Hi my name is ksw
 </pre>
+
+## 26. 파이썬은 객체지향 언어이다.
+파이썬에서 <code>class</code>를 사용하여 객체지향 프로그래밍을 할 수 있다.   
+특이하게, <code>self</code>라는 키워드를 사용하는데, C++ 에서의 <code>this</code>와 비슷한 개념이라고 이해하면 된다.
