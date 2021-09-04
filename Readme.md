@@ -26,6 +26,7 @@
 24. 16진법 이상의 n진수 변환 
 25. title(), capitalize() 를 활용한 문자열 다루기 
 26. 파이썬은 객체지향 언어이다.
+27. defaultdict()
 ## 1. 리스트 컴프리헨션
 <pre>
 <code>
@@ -434,3 +435,38 @@ Hi my name is ksw
 파이썬에서 <code>class</code>를 사용하여 객체지향 프로그래밍을 할 수 있다.   
 특이하게, <code>self</code>라는 키워드를 사용하는데, C++ 에서의 <code>this</code>와 비슷한 개념이라고 이해하면 된다.   
 클래스 안에서 메서드를 정의할 때는 첫 번째 인수를 항상 self로 지정해야 한다는 것을 외워야 한다.
+
+## 27. defaultdict()
+defaultdict()는 딕셔너리를 만드는 dict클래스의 서브클래스이다.   
+작동 방식은 dict()와 거의 동일한데, defaultdict()는 인자로 주어진 객체의 기본값을 딕셔너리 값의 초기값으로 지정할 수 있다.   
+숫자, 리스트, 셋 등으로 초기화 할 수 있기 때문에 여러 용도로 사용할 수 있다.
+<pre>
+<code>
+from collections import defaultdict
+fruits = ['딸기','사과','참외','바나나','포도']
+seasons = ['봄','여름','가을','겨울']
+elems = ['봄','사과','참외','가을','겨울']
+
+dic1 = dict()
+dic2 = defaultdict(list)
+
+for elem in elems:
+  if elem in fruits:
+    if not '과일' in dic1: dic1['과일'] = [elem]
+    else: dic1['과일'].append(elem)
+  elif elem in seasons:
+    if not '계절' in dic1: dic1['계절'] = [elem]
+    else: dic1['계절'].append(elem)
+
+for elem in elems:
+  if elem in fruits: dic2['과일'].append(elem)
+  elif elem in seasons: dic2['계절'].append(elem)
+
+print(dic1)
+print(dic2)
+</code>
+</pre>
+<code>
+{'계절': ['봄', '가을', '겨울'], '과일': ['사과', '참외']}
+defaultdict(<class 'list'>, {'계절': ['봄', '가을', '겨울'], '과일': ['사과', '참외']})
+</code>
