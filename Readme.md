@@ -466,7 +466,7 @@ print(dic1)
 print(dic2)
 </code>
 </pre>
-<code>
+<pre>
 {'계절': ['봄', '가을', '겨울'], '과일': ['사과', '참외']}   
 defaultdict(<class 'list'>, {'계절': ['봄', '가을', '겨울'], '과일': ['사과', '참외']})
-</code>
+</pre>
