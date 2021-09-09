@@ -482,5 +482,5 @@ arr = [[1],[2,3],[4,5,6]]
 result = sum(arr, [])
 </code>
 </pre>
-<code>sum(arr,[])</code>에서는 다음과 같은 식이 수행된다. <code>[] + [1] + [2,3] + [4,5,6]</code>
+<code>sum(arr,[])</code>에서는 다음과 같은 식이 수행된다. <code>[] + [1] + [2,3] + [4,5,6]</code>   
 결과 : <code>[1,2,3,4,5,6]</code>
