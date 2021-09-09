@@ -1,3 +1,4 @@
+# DFS 알고리즘을 이용한다는 생각이 죽어도 안떠올랐었는데, 이젠 자연스레 떠올라서 해결하였다.
 answer = 0
 def solution(numbers, target):
 
