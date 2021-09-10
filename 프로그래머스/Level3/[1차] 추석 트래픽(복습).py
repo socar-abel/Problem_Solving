@@ -24,10 +24,5 @@ def solution(lines):
         for log in logs:
             if inTime(log, key): x += 1
         throughputs[key] = x
-    
-    answer = max(throughputs.values())
-    print(throughputs)
-    
-    return answer
-
-
+        
+    return max(throughputs.values())
