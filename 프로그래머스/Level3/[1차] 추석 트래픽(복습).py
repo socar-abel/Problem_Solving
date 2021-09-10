@@ -1,3 +1,4 @@
+# 전보다 깔끔하게 품
 def inTime(log, time):  # time 부터 시작한 1초 안에 log가 있는지
     answer = True
     if log[1] < time: answer = False
