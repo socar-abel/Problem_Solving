@@ -11,15 +11,11 @@ def solution(lines):
     throughputs = dict()
     
     for line in lines:
-        # parsing
         hour = int(line[11:13]); minute = int(line[14:16]); second = float(line[17:23])
         end = int(hour*3600*1000 + minute*60*1000 + second*1000)
-        # 처리시간 T
         T = int(float(line[24:-1])*1000)
         start = end - T + 1
-        # Log 저장
         logs.append( (start,end) )
-        # 시간당 처리량
         throughputs[start] = 0
         throughputs[end] = 0
         
