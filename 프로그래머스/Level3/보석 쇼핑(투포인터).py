@@ -1,4 +1,4 @@
-# 투포인터로 풀었지만 시간복잡도 실패
+# 투포인터로 풀었지만 시간복잡도 실패.. 근데 투포인터로 하는거 맞긴함
 from collections import deque
 def solution(gems):
     candidates = []
