@@ -29,8 +29,7 @@
 27. defaultdict()
 28. sum을 이용해서 2차원 배열 -> 1차원 배열로 변환하기
 ## 1. 리스트 컴프리헨션
-<pre>
-<code>
+```python
 10 이하의 짝수를 담는 리스트 컴프리헨션  
 
 list = [x for x in range(1,10+1) if x % 2 == 0]
@@ -41,8 +40,7 @@ list = [x for x in range(1,10+1) if x % 2 == 0]
 짝수일 경우 그대로, 홀수일 경우 음수로 담는 코드
 listB = [ x if x % 2 == 0 else x * (-1) for x in range(1,10+1)]
 --> listB = [-1,2,-3,4,-5,6,-7,8,-9,10]
-</code>
-</pre>
+```
  
    
 <pre>
