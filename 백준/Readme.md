@@ -16,10 +16,9 @@ sys.setrecursionlimit(10000000)
 
 ### 2. input() 빨리 받기
 아래가 더 빠른 코드.   
-<pre>
 ```python
 N, M = map(int, input().split())
 
 N, M = map(int, sys.stdin.readline().split())
 ```
-</pre>
+
