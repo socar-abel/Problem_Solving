@@ -8,12 +8,12 @@
 ### 알고리즘 팁
 ### 1. Recursion Error 해결법
 재귀 함수 호출이 1000번으로 제한 걸려있기 때문에 리밋 해제를 해줘야한다.   
-<pre>
+
 ```python
 import sys
 sys.setrecursionlimit(10000000)
 ```
-</pre>
+
 ### 2. input() 빨리 받기
 아래가 더 빠른 코드.   
 <pre>
