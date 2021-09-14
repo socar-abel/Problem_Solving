@@ -1,9 +1,14 @@
-N, M = map(int, input().split())
+# input() 말고 sys.stdin.readline() 써야 시간복잡도 통과함 !
+
+import sys
+sys.setrecursionlimit(10000)
+
+N, M = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(N+1)]
 visited = [False] * (N+1)
 
 for _ in range(M):
-    a, b = map(int, input().split())
+    a, b = map(int, sys.stdin.readline().split())
     graph[a].append(b)
     graph[b].append(a)
 
