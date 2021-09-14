@@ -37,33 +37,30 @@ list = [x for x in range(1,10+1) if x % 2 == 0]
    
    
 # 리스트 컴프리헨션 내에 if와 else를 둘다 사용하고 싶다면 왼쪽에 작성해야한다.
-# 짝수일 경우 그대로, 홀수일 경우 음수로 담는 코드
+# 짝수일 경우 그대로, 홀수일 경우 음수로 담는 코드   
+   
 listB = [ x if x % 2 == 0 else x * (-1) for x in range(1,10+1)]
 --> listB = [-1,2,-3,4,-5,6,-7,8,-9,10]
 ```
  
    
-<pre>
-<code>
-0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
+```python
+# 0~4 의 수에서 짝수면 숫자를, 홀수면 odd를 담는 방법   
 
 list = [x if x % 2 == 0 else 'odd' for x in range(5)]
---> list = [0,odd,2,odd,4]
-</code>
-</pre>
+#--> list = [0,odd,2,odd,4]
+```
 
 
 
 ## 2. 리스트 복사
 
 파이썬 리스트에서는 deep copy와 shallow copy가 일어난다.
-<pre>
-<code>
+```python
 listA = [1,2,3]
 listB = listA
 listB[0] = 100
-</code>
-</pre>
+```
 위와 같이 코드를 작성한 경우      
 <code>listA = [100,2,3]</code> 으로 함께 변경된다.
    
@@ -83,8 +80,7 @@ listB[0] = 100
 ## 4. 간편한 이진탐색 bisect
 Python에서는 bisect를 지원한다.  
 이진탐색의 시간복잡도는 O(log n) time이므로 코딩테스트에서 활용하기 좋다.
-<pre>
-<code>
+```python
 from bisect import bisect_left, bisect_right
 array = [10,10,10,20,30,30,40,40,40,40,40,60,70,80,80,90]
 
@@ -92,12 +88,10 @@ cutLine = 30
 index1 = bisect_left(array,cutLine)
 index2 = bisect_right(array,cutLine)
 print(index1,index2)
-</code>
-</pre>
+```
 -> 출력 : <code>4 6</code>   
 추가) 리스트에 없는 원소를 bisect 탐색한다면 ?
-<pre>
-<code>
+```python
 import bisect 
 list = [10,20,30,40,50]
 print(bisect.bisect_left(list,30))
@@ -105,8 +99,7 @@ print(bisect.bisect_right(list,30))
 
 print(bisect.bisect_left(list,35))
 print(bisect.bisect_right(list,35))
-</code>
-</pre>
+```
 결과 :   
 2   
 3   
@@ -123,34 +116,28 @@ print(bisect.bisect_right(list,35))
 
 ## 6. lambda + sorted 
    
-<pre>
-<code>
+```python
 c = sorted(a, key = lambda x : x[0])
-</code>
-</pre>
+```
 
 리스트 a에서 0번째 값을 key로 sorting 하는 방법.
 
 ## 7. 리스트에서의 중복제거
-<pre>
-<code>
+```python
 listA = [2,2,3,3,3,4,5,6,6,...]  # 정렬된 리스트
 listA = list(set(listA)) # 중복제거
 listA.sort()  # 재정렬
-</code>
-</pre>
+```
 set을 이용해서 중복제거를 할 수 있지만, set을 사용하면 순서가 뒤섞이기 때문에 다시 sort()해줘야 한다.
 
 ## 8. 문자열과 리스트
 문자열에서는 마치 리스트처럼 한 글자마다 번호를 새긴다.
-<pre>
-<code>
+```python
 x = 'banana'
 
 --> x[0] = 'b'
 --> x[2:4] = 'na'
-</code>
-</pre>
+```
 
 하지만 문자열에 있는 글자를 리스트처럼 접근해서 변경할 수는 없다.
 <pre>
@@ -172,13 +159,11 @@ x = "".join(x)
 </pre>
 
 ## 9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
-<pre>
-<code>
+```python
 ex1 = '1'
 ex2 = 'A'
 print(ex1.isdigit(), ex2.isalpha())
-</code>
-</pre>
+```
 
 결과 : <code>True True</code>
 
@@ -189,8 +174,7 @@ C++의 for문은
    
 하지만 Python에서는 for문 안에서 i 값을 변경하면 그 반복문 내에서는 반영되지만, 다음 반복시에는 원래의 i값(다음값)으로 돌아간다.
 다음 예시는 1,2,3,4,5 를 가진 리스트에서, 3을 만날경우 건너뛰고 싶은 상황이다.
-<pre>
-<code>
+```python
 # 잘못된 예시
 arr = [1,2,3,4,5]
 
@@ -208,8 +192,7 @@ while a < len(arr):
   print(arr[a],end = ' ')
   a += 1
 print()  # 결과 --> 1 2 4 5
-</code>
-</pre>
+```
    
 ## 11. pass와 continue의 차이
 pass : 실행할 코드가 없는 것으로 다음 행동을 계속해서 진행한다.   
