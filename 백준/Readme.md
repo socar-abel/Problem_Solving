@@ -22,3 +22,9 @@ N, M = map(int, input().split())
 N, M = map(int, sys.stdin.readline().split())
 ```
 
+### 3. 런타임에러(Index Error)
+```python
+map(input().split())
+map(input())
+```
+split()이 필요없을 때 해줬을 시 Index Error가 난다. 
