@@ -29,3 +29,5 @@ map(input().split())
 map(input())
 ```
 split()이 필요없을 때 해줬을 시 Index Error가 난다. 
+## 복습할 문제들
+- 1013 Contact
