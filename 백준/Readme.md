@@ -12,7 +12,7 @@
 
 ```python
 import sys
-sys.setrecursionlimit(10000000)
+sys.setrecursionlimit(10**6)
 ```
 
 ### 2. input() 빨리 받기
