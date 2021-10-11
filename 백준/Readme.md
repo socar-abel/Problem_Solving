@@ -1,5 +1,6 @@
 ## BaekJoon Online Judge 
 ### 알고리즘 별 연습
+0. 구현
 1. BSF / DFS
 2. 그리디
 3. DP (Dynamic Programming)
