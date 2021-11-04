@@ -479,9 +479,6 @@ result = sum(arr, [])
 Mutable : 가변적인 (int, string, tuple)   
 Immutable : 불가변적인 (list, dictionary, set) 
 
-<pre>
-<code>
-
 ```python
 # immutable
 a = 1
@@ -505,5 +502,3 @@ change(a,b,c,x,y,z)
 print(a,b,c,x,y,z)
 ```
 
-</code>
-</pre>
