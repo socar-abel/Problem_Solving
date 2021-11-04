@@ -29,6 +29,7 @@
 27. defaultdict()
 28. sum을 이용해서 2차원 배열 -> 1차원 배열로 변환하기
 29. 정규표현식 re
+30. 파이썬의 mutable / immutable
 ## 1. 리스트 컴프리헨션
 ```python
 # 10 이하의 짝수를 담는 리스트 컴프리헨션  
@@ -472,3 +473,34 @@ result = sum(arr, [])
 ## 29. 정규표현식 re
 파이썬은 re 라이브러리에서 정규표현식을 제공한다.   
 간혹 문자열 문제에서 엄청난 이득을 볼 수 있으니 알아두는 것이 좋다.
+
+## 30. 파이썬의 mutable / immutable
+
+Mutable : 가변적인 (int, string, tuple)   
+Immutable : 불가변적인 (list, dictionary, set) 
+
+<pre>
+<code>
+# immutable
+a = 1
+b = "1"
+c = (1,1)
+
+# mutable
+x = [1,1,1]
+y = {'one': 1}
+z = {1,2,3}
+
+def change(a, b, c, x, y, z):
+  a = 999
+  b = "999"
+  c = (999,999)
+  x[0] = 999
+  y['one'] = 999
+  z.add(999)
+
+change(a,b,c,x,y,z)
+print(a,b,c,x,y,z)
+
+</code>
+</pre>
