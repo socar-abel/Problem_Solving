@@ -481,6 +481,8 @@ Immutable : 불가변적인 (list, dictionary, set)
 
 <pre>
 <code>
+
+```python
 # immutable
 a = 1
 b = "1"
@@ -501,6 +503,7 @@ def change(a, b, c, x, y, z):
 
 change(a,b,c,x,y,z)
 print(a,b,c,x,y,z)
+```
 
 </code>
 </pre>
