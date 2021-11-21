@@ -8,7 +8,7 @@
 6. lambda + sorted   
 7. 리스트에서의 중복 제거
 8. 문자열과 리스트
-9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha()
+9. 문자열 숫자/알파벳 판별 - isdigit(), isalpha() 
 10. 파이썬 for문의 index
 11. pass와 continue의 차이 
 12. 빈 리스트일때의 return ... or 사용법  
