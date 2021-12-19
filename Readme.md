@@ -30,6 +30,7 @@
 28. sum을 이용해서 2차원 배열 -> 1차원 배열로 변환하기
 29. 정규표현식 re
 30. 파이썬의 mutable / immutable
+31. Counter, most_common()
 ## 1. 리스트 컴프리헨션
 ```python
 # 10 이하의 짝수를 담는 리스트 컴프리헨션  
@@ -501,4 +502,20 @@ def change(a, b, c, x, y, z):
 change(a,b,c,x,y,z)
 print(a,b,c,x,y,z)
 ```
+## 31. Counter, most_common()
+원소가 몇번 등장하는지 깔끔하게 정리할 수 있는 Counter 라는 클래스가 있다.   
+collections 모듈에 존재한다.
 
+<pre>
+<code>
+from collections import Counter
+a = [10, 10, 10, 20, 40, 40]
+counter = Counter(a)
+print(counter)    # Counter({10: 3, 40: 2, 20: 1})
+b = counter.most_common()
+print(b)          # [(10, 3), (40, 2), (20, 1)]
+c = counter.most_common(1)
+print(c)          # [(10, 3)]
+
+</code>
+</pre>
