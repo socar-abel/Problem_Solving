@@ -504,7 +504,7 @@ print(a,b,c,x,y,z)
 ```
 ## 31. Counter, most_common()
 원소가 몇번 등장하는지 깔끔하게 정리할 수 있는 Counter 라는 클래스가 있다.   
-collections 모듈에 존재한다.
+collections 모듈에 존재하며, dict 로 깔끔하게 형변환도 가능하다.
 
 ```python
 from collections import Counter
