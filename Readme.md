@@ -506,8 +506,7 @@ print(a,b,c,x,y,z)
 원소가 몇번 등장하는지 깔끔하게 정리할 수 있는 Counter 라는 클래스가 있다.   
 collections 모듈에 존재한다.
 
-<pre>
-<code>
+```python
 from collections import Counter
 a = [10, 10, 10, 20, 40, 40]
 counter = Counter(a)
@@ -516,6 +515,4 @@ b = counter.most_common()
 print(b)          # [(10, 3), (40, 2), (20, 1)]
 c = counter.most_common(1)
 print(c)          # [(10, 3)]
-
-</code>
-</pre>
+```
