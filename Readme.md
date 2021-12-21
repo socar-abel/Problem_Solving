@@ -30,7 +30,8 @@
 28. sum을 이용해서 2차원 배열 -> 1차원 배열로 변환하기
 29. 정규표현식 re
 30. 파이썬의 mutable / immutable
-31. Counter, most_common()
+31. Counter, most_common()   
+32. 파이썬 for 문에서 조심할 것
 ## 1. 리스트 컴프리헨션
 ```python
 # 10 이하의 짝수를 담는 리스트 컴프리헨션  
@@ -515,4 +516,21 @@ b = counter.most_common()
 print(b)          # [(10, 3), (40, 2), (20, 1)]
 c = counter.most_common(1)
 print(c)          # [(10, 3)]
+```
+   
+## 32. 파이썬 for문에서 조심할 것   
+파이썬 for 문은 간편한 기능도 제공하지만 주의할 점도 있다.   
+
+```python
+listA = [1,2,3,4,5]
+
+for a in listA:
+   a = 0
+
+print(listA)   # -> [1,2,3,4,5] 바뀌지 않음
+
+for i in range(len(listA)):
+   listA[i] = 0
+  
+print(listA)   # -> [0,0,0,0,0] 바뀜
 ```
