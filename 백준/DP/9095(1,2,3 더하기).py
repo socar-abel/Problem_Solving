@@ -18,4 +18,4 @@ def program():
 
 
 for _ in range(T):
-    program()
+    program() 
