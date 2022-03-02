@@ -36,3 +36,45 @@ for p in plan:
         sys.exit(0)
 
 print("YES")
+
+# Union-Find 에 대한 개념을 잡고 난 뒤의 정답 코드
+import sys
+N = int(sys.stdin.readline())
+M = int(sys.stdin.readline())
+
+graph = []
+for _ in range(N):
+    graph.append(list(map(int, sys.stdin.readline().split())))
+
+plan = list(map(int, sys.stdin.readline().split()))
+parent = [x for x in range(N)]
+
+
+# find
+def findParent(x):
+    if parent[x] == x:
+        return x
+    else:
+        parent[x] = findParent(parent[x])
+        return parent[x]
+
+
+# union
+for i in range(N):
+    for j in range(N):
+        if graph[i][j] == 1:
+            pi = findParent(i)
+            pj = findParent(j)
+            if pi < pj:
+                parent[pj] = pi
+            else:
+                parent[pi] = pj
+
+#print(parent)
+root = parent[plan[0]-1]
+for p in plan:
+    if root != parent[p-1]:
+        print("NO")
+        sys.exit(0)
+
+print("YES")
