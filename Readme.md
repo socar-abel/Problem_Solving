@@ -1,5 +1,5 @@
 # Python Tip - by KSW  
-Swift Tip : https://velog.io/@heyksw/Swift-%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%95%B4%EA%B2%B0-%ED%8C%81
+**Swift Tip** : https://velog.io/@heyksw/Swift-%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%95%B4%EA%B2%B0-%ED%8C%81
 ## Contents   
 1. 리스트 컴프리헨션
 2. 리스트 복사
