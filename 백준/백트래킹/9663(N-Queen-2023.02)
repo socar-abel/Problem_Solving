@@ -1,0 +1,56 @@
+import sys
+N = int(sys.stdin.readline())
+visit = [[False]*N for _ in range(N)]
+answer = 0
+
+
+def visit_queen(a, b):
+    new_visit = []
+    for i in range(N):
+        if not visit[a][i]:
+            visit[a][i] = True
+            new_visit.append((a, i))
+        if not visit[i][b]:
+            visit[i][b] = True
+            new_visit.append((i, b))
+
+    for i in range(1, a+1):
+        if 0 <= b-i:
+            if not visit[a-i][b-i]:
+                visit[a-i][b-i] = True
+                new_visit.append((a-i, b-i))
+        if b+i < N:
+            if not visit[a-i][b+i]:
+                visit[a-i][b+i] = True
+                new_visit.append((a-i, b+i))
+
+    for i in range(1, N-a):
+        if 0 <= b-i:
+            if not visit[a+i][b-i]:
+                visit[a+i][b-i] = True
+                new_visit.append((a+i, b-i))
+        if b+i < N:
+            if not visit[a+i][b+i]:
+                visit[a+i][b+i] = True
+                new_visit.append((a+i, b+i))
+    return new_visit
+
+
+def dfs(x, y):
+    global answer
+    if x == N-1:
+        answer += 1
+        return
+
+    for i in range(N):
+        if not visit[x + 1][i]:
+            new_visit = visit_queen(x+1, i)
+            dfs(x+1, i)
+            for a, b in new_visit:
+                visit[a][b] = False
+
+for i in range(N):
+    visit_queen(0, i)
+    dfs(0, i)
+    visit = [[False]*N for _ in range(N)]
+print(answer)
