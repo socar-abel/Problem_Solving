@@ -33,6 +33,8 @@
 30. 파이썬의 mutable / immutable
 31. Counter, most_common()   
 32. 파이썬 for 문에서 조심할 것
+33. 두 구간이 겹치는지 확인   
+
 ## 1. 리스트 컴프리헨션
 ```python
 # 10 이하의 짝수를 담는 리스트 컴프리헨션  
@@ -539,4 +541,12 @@ for i in range(len(listA)):
    listA[i] = 0
   
 print(listA)   # -> [0,0,0,0,0] 바뀜
+```   
+
+## 33. 두 구간이 겹치는지 확인   
+```python
+def is_overlap(a_start, a_end, b_start, b_end):
+   if a_start <= b_end and b_start <= a_end:
+      return True
+   return False
 ```
